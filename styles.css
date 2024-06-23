@@ -173,7 +173,7 @@ body {
 
 @media (max-width: 768px) {
     .sub-menu-column {
-        width: 100%; /* En dispositivos móviles, cada columna ocupa el 100% del ancho */
+        width: 95%; /* En dispositivos móviles, cada columna ocupa el 100% del ancho */
     }
 }
 
