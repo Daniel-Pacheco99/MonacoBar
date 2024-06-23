@@ -183,3 +183,54 @@ body {
     }
 }
 
+
+
+/* Estilos generales para la sección de licores */
+#licores {
+    text-align: center; /* Alinear el texto al centro */
+    margin-bottom: 20px; /* Espacio hacia abajo */
+}
+
+#licores h3 {
+    font-family: 'Bell MT', serif; /* Fuente Bell MT */
+    font-size: 30px; /* Tamaño de fuente 30px */
+    color: #A56F00; /* Color de texto #A56F00 */
+}
+
+/* Estilos para la tabla de licores */
+.licores-table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapsar bordes */
+    margin: 20px 0; /* Espacio vertical */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+.licores-table th,
+.licores-table td {
+   
+    padding: 8px; /* Relleno */
+}
+
+.licores-table th {
+    background-color: #A56F00; /* Fondo de encabezado */
+    color: white; /* Color de texto del encabezado */
+    font-family: 'Bell MT', serif; /* Fuente Bell MT */
+}
+
+.licores-table tr:hover {
+    background-color: #ddd; /* Fondo al pasar el ratón */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .licores-table {
+        font-size: 14px; /* Reducir tamaño de fuente en móviles */
+    }
+}
+
+/* Estilo para la columna de nombres de bebidas */
+.align-left {
+    text-align: left;
+}
+
+

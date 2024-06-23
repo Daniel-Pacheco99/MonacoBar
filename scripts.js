@@ -75,3 +75,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const licores = [
+        { bebida: "Aguardiente Amarillo", shot: "$7.000", precio375: "-", precio750: "$75.000", precio1000: "-" },
+        { bebida: "Aguardiente Tapa Verde", shot: "$7.000", precio375: "$35.000", precio750: "$70.000", precio1000: "$90.000" },
+        { bebida: "Aguardiente Tapa Azul", shot: "$8.000", precio375: "-", precio750: "$75.000", precio1000: "$95.000" },
+        { bebida: "Ron Viejo de Caldas", shot: "$8.000", precio375: "-", precio750: "$85.000", precio1000: "-" },
+        { bebida: "Ron Medellín 3 años", shot: "$6.000", precio375: "-", precio750: "$65.000", precio1000: "-" },
+        { bebida: "Ron Medellín 5 años", shot: "$7.000", precio375: "-", precio750: "$75.000", precio1000: "-" },
+        { bebida: "Ron Medellín 8 años", shot: "$9.000", precio375: "-", precio750: "$90.000", precio1000: "-" },
+        { bebida: "Smirnoff de Lulo", shot: "$6.000", precio375: "-", precio750: "$60.000", precio1000: "-" },
+        { bebida: "Red Label", shot: "$9.000", precio375: "-", precio750: "$90.000", precio1000: "-" },
+        { bebida: "Old Parr 12 años", shot: "$17.000", precio375: "-", precio750: "$230.000", precio1000: "-" },
+        { bebida: "Buchanans Delux 12 años", shot: "$26.000", precio375: "-", precio750: "$200.000", precio1000: "$260.000" },
+        { bebida: "Buchanans Master", shot: "$30.000", precio375: "-", precio750: "$250.000", precio1000: "$300.000" },
+        { bebida: "Craggnmore 12 años", shot: "$30.000", precio375: "-", precio750: "$300.000", precio1000: "-" },
+        { bebida: "Jose Cuervo", shot: "$13.000", precio375: "-", precio750: "$130.000", precio1000: "-" },
+        { bebida: "Tequila 1800 Silver", shot: "$26.000", precio375: "-", precio750: "$270.000", precio1000: "-" },
+        { bebida: "Don Julio Blanco", shot: "$30.000", precio375: "-", precio750: "$330.000", precio1000: "-" },
+        { bebida: "Tequila 1800 Reposado", shot: "$31.000", precio375: "-", precio750: "$330.000", precio1000: "-" },
+        { bebida: "Tequila 1800 Añejo", shot: "$33.000", precio375: "-", precio750: "$350.000", precio1000: "-" }
+    ];
+
+    const tbody = document.getElementById("licores-table-body");
+
+    licores.forEach(licor => {
+        const row = document.createElement("tr");
+
+        Object.keys(licor).forEach((key, index) => {
+            const cell = document.createElement("td");
+            cell.textContent = licor[key];
+            if (index === 0) {
+                cell.classList.add("align-left"); // Añade la clase a la primera columna
+            }
+            row.appendChild(cell);
+        });
+
+        tbody.appendChild(row);
+    });
+});

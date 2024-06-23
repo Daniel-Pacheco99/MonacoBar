@@ -4,28 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monaco Bar</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente de Google Fonts -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="intro">
-            <img src="logoMonacoBar.png" alt="Logo Monaco Bar" class="logo"> <!-- Logo del bar -->
-            <p class="intro-text">¡Bienvenidos al increíble MÓNACO Bar, donde las experiencias son tan exclusivas como inolvidables! Disfruta cada momento al máximo porque lo que sucede en MÓNACO, <br> ¡PERMANECE EN MÓNACO! 🌟</p> <!-- Texto de introducción con emoticones -->
-            <a href="#" id="btn-empezar" class="btn-start">I'm ready</a> <!-- Botón para comenzar, enlace simulado -->
-            <!-- Sección del menú -->
+            <img src="logoMonacoBar.png" alt="Logo Monaco Bar" class="logo">
+            <p class="intro-text">¡Bienvenidos al increíble MÓNACO Bar, donde las experiencias son tan exclusivas como inolvidables! Disfruta cada momento al máximo porque lo que sucede en MÓNACO, <br> ¡PERMANECE EN MÓNACO! 🌟</p>
+            <a href="#" id="btn-empezar" class="btn-start">I'm ready</a>
             <header class="header" id="menu-header">
-                <h2>MENÚ MÓNACO BAR</h2> <!-- Título del menú -->
-                <!-- Enlaces rápidos para secciones -->
+                <h2>MENÚ MÓNACO BAR</h2>
                 <div id="quick-links" class="quick-links">
-                    <a href="#" data-target="bebidas" class="quick-link">BEBIDAS</a> <!-- Enlace rápido a la sección de bebidas -->
-                    <a href="#" data-target="licores" class="quick-link">LICORES</a> <!-- Enlace rápido a la sección de licores -->
-                    <a href="#" data-target="comidas" class="quick-link">COMIDAS</a> <!-- Enlace rápido a la sección de comidas -->
-                    <a href="#" data-target="promociones" class="quick-link">PROMOCIONES</a> <!-- Enlace rápido a la sección de promociones -->
+                    <a href="#" data-target="bebidas" class="quick-link">BEBIDAS</a>
+                    <a href="#" data-target="licores" class="quick-link">LICORES</a>
+                    <a href="#" data-target="comidas" class="quick-link">COMIDAS</a>
+                    <a href="#" data-target="promociones" class="quick-link">PROMOCIONES</a>
                 </div>
             </header>
             <div id="menu" class="menu-section">
-                <!-- Sección de bebidas -->
                 <div id="bebidas" class="menu-subsection">
                     <h3 style="font-family: 'Bell MT', serif; font-size: 30px; color: #A56F00;">BEBIDAS</h3>
                     <div class="sub-menu-row">
@@ -33,7 +30,6 @@
                             <h4>COCTELES</h4>
                             <p class="menu-item">CUBA LIBRE.......................$10.000</p>
                             <p class="menu-item">CAIPIROSKA.......................$10.000</p>
-                            <!-- Más elementos de COCTELES aquí -->
                         </div>
                     </div>
                     <div class="sub-menu-row">
@@ -41,59 +37,53 @@
                             <h4 style="text-align: right;">LIMONADAS</h4>
                             <p class="menu-item">MICHELADA TRADICIONAL.......$10.000</p>
                             <p class="menu-item">FRESA...............................................$12.000</p>
-                            <!-- Más elementos de LIMONADAS aquí -->
                         </div>
                     </div>
                 </div>
                 
-                
-                
-                <!-- Sección de licores -->
                 <div id="licores" class="menu-subsection">
                     <h3 style="font-family: 'Bell MT', serif; font-size: 30px; color: #A56F00;">LICORES</h3>
-                    <p class="menu-item">CUBA LIBRE.......................$10.000</p>
-                    <p class="menu-item">CAIPIROSKA.......................$10.000</p>
-                    <p class="menu-item">GIN & TONIC......................$12.000</p>
-                    <p class="menu-item">DRY MARTINI......................$12.000</p>
-                    <p class="menu-item">COSMOPOLITAN.....................$12.000</p>
-                    <p class="menu-item">MOJITO...........................$15.000</p>
-                    <p class="menu-item">MARANGIN.........................$15.000</p>
-                    <p class="menu-item">DAIQUIRÍ.........................$16.000</p>
-                    <p class="menu-item">MARGARITA........................$16.000</p>
-                    <p class="menu-item">MARGARITA MARACUYA...............$16.000</p>
-                    <p class="menu-item">MOJITO MARACUYÁ..................$16.000</p>
-                    <p class="menu-item">BLUE LAGOON.........................................$17.000</p>
-                    <p class="menu-item">BLUE HAWAII......................$17.000</p>
-                    <!-- Más elementos de licores -->
+                    <table class="licores-table">
+                        <thead>
+                            <tr>
+                                <th class="align-left">Bebida</th>
+                                <th>Shot</th>
+                                <th>Precio 375ml</th>
+                                <th>Precio 750ml</th>
+                                <th>Precio 1000ml</th>
+                            </tr>
+                        </thead>
+                        <tbody id="licores-table-body">
+                            <!-- Contenido generado dinámicamente -->
+                        </tbody>
+                    </table>
                 </div>
-                <!-- Sección de comidas -->
+
                 <div id="comidas" class="menu-subsection">
                     <h3 style="font-family: 'Bell MT', serif; font-size: 30px; color: #A56F00;">COMIDAS</h3>
                     <p class="menu-item">Entradas</p>
                     <p class="menu-item">Platos principales</p>
-                    <!-- Más elementos de comidas -->
                 </div>
-                <!-- Sección de promociones -->
+                
                 <div id="promociones" class="menu-subsection">
                     <h3 style="font-family: 'Bell MT', serif; font-size: 30px; color: #A56F00;">PROMOCIONES</h3>
                     <p class="menu-item">Happy Hour de 18:00 a 20:00</p>
                     <p class="menu-item">Descuento del 20% en cumpleaños</p>
-                    <!-- Más elementos de promociones -->
                 </div>
             </div>
         </div>
     </div>
-    
+
     <section id="contacto">
         <h2>Contacto</h2>
         <p>Email: contacto@mibar.com</p>
         <p>Teléfono: 123-456-7890</p>
     </section>
-    
+
     <footer>
-        <p>&copy; Todos los derechos reservados. Desarrollado por Daniel Pacheco</p> <!-- Derechos de autor -->
+        <p>&copy; Todos los derechos reservados. Desarrollado por Daniel Pacheco</p>
     </footer>
-    
+
     <script src="scripts.js"></script> <!-- Incluir archivo JavaScript externo -->
 </body>
 </html>
