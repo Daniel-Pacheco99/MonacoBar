@@ -1,42 +1,179 @@
+/* Estilos generales para el cuerpo del documento */
+body {
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    text-align: center; /* Alinear texto al centro */
+    margin: 0; /* Eliminar margen predeterminado */
+    padding: 0; /* Eliminar padding predeterminado */
+}
+
+/* Contenedor principal que centra todo el contenido verticalmente */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Mínimo 100% del viewport en altura */
+}
+
+/* Sección de introducción con el logo y texto de bienvenida */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para el logo */
 .intro img {
     width: 500px; /* Ancho fijo para el logo */
-    margin-bottom: 10px; /* Margen inferior para separar el logo del texto */
-    animation: moveLogo 2s ease-in-out infinite alternate; /* Animación de movimiento del logo */
+    margin-bottom: 10px; /* Espacio inferior */
+    animation: moveLogo 2s ease-in-out infinite alternate; /* Animación del logo */
 }
 
+/* Animación de movimiento para el logo */
 @keyframes moveLogo {
     0%, 100% { 
-        transform: translate(-100px, 10px); /* Comienza y termina moviéndose hacia la izquierda y abajo */
+        transform: translate(-100px, 10px); /* Movimiento inicial y final */
     }
     50% {
-        transform: translate(200px, 100px); /* Moviéndose hacia la derecha y abajo a la mitad de la animación */
+        transform: translate(200px, 100px); /* Movimiento en la mitad de la animación */
     }
 }
 
-.intro-text {
-    font-size: 20px; /* Tamaño de fuente para el texto de introducción */
-    line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
-    margin-bottom: 20px; /* Margen inferior para separar el texto del botón */
-    animation: fallDown 2s ease forwards; /* Animación de caída de las letras */
-    opacity: 0; /* Inicialmente invisible */
-}
-
-@keyframes fallDown {
-    0% { transform: translateY(-100px); opacity: 0; } /* Comienza fuera de la pantalla y transparente */
-    100% { transform: translateY(0); opacity: 1; } /* Termina en la posición final visible */
-}
-
+/* Estilos para el botón de inicio */
 .btn-start {
-    display: inline-block; /* Muestra como bloque en línea */
-    padding: 10px 20px; /* Relleno interior del botón */
-    background-color: #ffffff; /* Color de fondo blanco */
-    color: black; /* Color de texto negro */
-    text-decoration: none; /* Sin decoración de texto */
-    font-size: 24px; /* Tamaño de fuente */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    color: black; /* Texto negro */
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición de color */
+    margin-top: 20px; /* Espacio superior */
 }
 
 .btn-start:hover {
-    background-color: #A56F00; /* Cambio de color de fondo al pasar el ratón */
+    background-color: #e0e0e0; /* Cambio de color al pasar el ratón */
 }
+
+/* Encabezado del menú */
+.header {
+    background-color: #A56F00; /* Fondo marrón */
+    padding: 20px; /* Relleno interno */
+    text-align: center; /* Alinear texto al centro */
+    display: none; /* Oculto inicialmente */
+    margin-top: 20px; /* Espacio superior */
+    width: 100%; /* Ancho completo */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+}
+
+.header h2 {
+    font-family: 'Bell MT', serif; /* Fuente para el título */
+    font-size: 36px; /* Tamaño del título */
+    margin: 0; /* Eliminar margen */
+    color: white; /* Texto blanco */
+}
+
+/* Sección de menú que contiene las subsecciones */
+.menu-section {
+    display: none; /* Oculto inicialmente */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.menu-section.active {
+    display: block; /* Mostrar cuando está activo */
+}
+
+/* Subsecciones del menú */
+.menu-subsection {
+    margin-top: 20px; /* Espacio superior */
+}
+
+.menu-subsection h3 {
+    font-size: 28px; /* Tamaño del título de la subsección */
+}
+
+.menu-item {
+    font-size: 20px; /* Tamaño del texto de los elementos del menú */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+
+/* Efecto de transición para las subsecciones del menú */
+.menu-subsection {
+    opacity: 0; /* Oculto inicialmente */
+    transition: opacity 0.6s ease-in-out; /* Transición de opacidad */
+}
+
+.menu-subsection.active {
+    opacity: 1; /* Mostrar con opacidad completa cuando está activo */
+}
+
+/* Estilos para los enlaces rápidos */
+.quick-links {
+    display: none; /* Ocultar inicialmente */
+    justify-content: space-around; /* Distribución espaciada */
+    margin-top: 20px; /* Espacio superior */
+    width: 100%; /* Ancho completo */
+    background-color: #333231; /* Fondo gris oscuro */
+    padding: 10px 0; /* Relleno interno */
+}
+
+.quick-link {
+    color: white; /* Texto blanco */
+    font-size: 18px; /* Tamaño del texto */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease; /* Transición de color */
+}
+
+.quick-link:hover {
+    color: #ffffff; /* Cambio de color al pasar el ratón */
+}
+
+
+
+
+
+
+/* Estilos para la sección principal de BEBIDAS */
+#bebidas {
+    text-align: center; /* Alinear el texto al centro */
+    margin-bottom: 20px; /* Espacio hacia abajo */
+}
+
+#bebidas h3 {
+    font-family: 'Bell MT', serif; /* Fuente Bell MT */
+    font-size: 30px; /* Tamaño de fuente 30px */
+    color: #A56F00; /* Color de texto #A56F00 */
+}
+
+/* Contenedor para cada fila de subsecciones */
+.sub-menu-row {
+    display: flex; /* Utilizar flexbox */
+    justify-content: left; /* Centrar contenido horizontalmente */
+    margin-top: 10px; /* Espacio hacia arriba */
+}
+
+/* Estilos para las columnas de subsecciones */
+.sub-menu-column {
+    width: 200%; /* Ancho del 50% del contenedor principal */
+}
+
+.left-column {
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.right-column {
+    text-align: right; /* Alinear texto a la derecha */
+}
+
+@media (max-width: 768px) {
+    .sub-menu-column {
+        width: 100%; /* En dispositivos móviles, cada columna ocupa el 100% del ancho */
+    }
+}
+
