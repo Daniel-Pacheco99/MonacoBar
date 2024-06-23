@@ -160,7 +160,7 @@ body {
 
 /* Estilos para las columnas de subsecciones */
 .sub-menu-column {
-    width: 200%; /* Ancho del 50% del contenedor principal */
+    width: 50%; /* Ancho del 50% del contenedor principal */
 }
 
 .left-column {
