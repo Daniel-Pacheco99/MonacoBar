@@ -1,83 +1,63 @@
-// Espera 8 segundos (8000 milisegundos) antes de ejecutar la función
-setTimeout(function() {
-    // Selecciona el elemento con la clase "intro-text"
-    var introText = document.querySelector('.intro-text');
-    
-    // Verifica que el elemento existe antes de intentar cambiar su contenido
-    if (introText) {
-        // Cambia el texto dentro del párrafo de introducción después de 8 segundos
-        introText.innerHTML = '¡Bienvenidos al increíble MÓNACO Bar, donde las experiencias son tan exclusivas como inolvidables! Disfruta cada momento al máximo porque lo que sucede en MÓNACO, <br> ¡ENJOY IT! 🌟';
-    }
-}, 8000); // Tiempo en milisegundos (8 segundos)
+// Función para cambiar el texto de introducción después de 8 segundos
+function changeIntroText() {
+    setTimeout(() => {
+        const introText = document.querySelector('.intro-text');
+        if (introText) {
+            introText.innerHTML = '¡Bienvenidos al increíble MÓNACO Bar, donde las experiencias son tan exclusivas como inolvidables! Disfruta cada momento al máximo porque lo que sucede en MÓNACO, <br> ¡ENJOY IT! 🌟';
+        }
+    }, 8000);
+}
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Escucha el clic en el botón "EMPEZAR"
-    document.getElementById('btn-empezar').addEventListener('click', function(event) {
-        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-
-        // Mostrar el encabezado del menú y las secciones del menú
+// Función para manejar el clic en el botón "EMPEZAR"
+function setupStartButton() {
+    document.getElementById('btn-empezar').addEventListener('click', event => {
+        event.preventDefault();
         document.getElementById('menu-header').style.display = 'block';
         document.getElementById('menu').style.display = 'block';
-
-        // Mostrar los enlaces rápidos
         document.getElementById('quick-links').style.display = 'flex';
 
-        // Realizar desplazamiento suave hacia el encabezado del menú
         document.getElementById('menu-header').scrollIntoView({
             behavior: 'smooth'
         });
 
-        // Detectar el scroll y mostrar las secciones conforme se van mostrando en la pantalla
-        window.addEventListener('scroll', function() {
-            const bebidas = document.getElementById('bebidas');
-            const licores = document.getElementById('licores');
-            const comidas = document.getElementById('comidas');
-            const promociones = document.getElementById('promociones');
-
-            const windowHeight = window.innerHeight;
-            const bebidasTop = bebidas.getBoundingClientRect().top;
-            const licoresTop = licores.getBoundingClientRect().top;
-            const comidasTop = comidas.getBoundingClientRect().top;
-            const promocionesTop = promociones.getBoundingClientRect().top;
-
-            // Agregar la clase 'active' a las secciones conforme se muestran en la pantalla
-            if (bebidasTop < windowHeight) {
-                bebidas.classList.add('active');
-            }
-
-            if (licoresTop < windowHeight) {
-                licores.classList.add('active');
-            }
-
-            if (comidasTop < windowHeight) {
-                comidas.classList.add('active');
-            }
-
-            if (promocionesTop < windowHeight) {
-                promociones.classList.add('active');
-            }
-        });
+        // Mostrar secciones conforme se desplazan en la pantalla
+        window.addEventListener('scroll', revealSectionsOnScroll);
     });
+}
 
-    // Función para manejar el clic en los enlaces rápidos
+// Función para mostrar secciones del menú conforme se desplazan en la pantalla
+function revealSectionsOnScroll() {
+    const sections = ['bebidas', 'licores', 'comidas', 'promociones'];
+    const windowHeight = window.innerHeight;
+
+    sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < windowHeight) {
+                section.classList.add('active');
+            }
+        }
+    });
+}
+
+// Función para manejar el clic en los enlaces rápidos
+function setupQuickLinks() {
     const quickLinks = document.querySelectorAll('.quick-link');
     quickLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-
-            const targetId = this.getAttribute('data-target'); // Obtener el ID de la sección objetivo
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            const targetId = event.target.getAttribute('data-target');
             const targetSection = document.getElementById(targetId);
-
             if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave hacia la sección objetivo
+                targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
-});
+}
 
-
-document.addEventListener("DOMContentLoaded", () => {
+// Función para cargar la tabla de licores dinámicamente
+function loadLicoresTable() {
     const licores = [
         { bebida: "Aguardiente Amarillo", shot: "$7.000", precio375: "-", precio750: "$75.000", precio1000: "-" },
         { bebida: "Aguardiente Tapa Verde", shot: "$7.000", precio375: "$35.000", precio750: "$70.000", precio1000: "$90.000" },
@@ -99,20 +79,26 @@ document.addEventListener("DOMContentLoaded", () => {
         { bebida: "Tequila 1800 Añejo", shot: "$33.000", precio375: "-", precio750: "$350.000", precio1000: "-" }
     ];
 
-    const tbody = document.getElementById("licores-table-body");
+    const tbody = document.getElementById('licores-table-body');
 
     licores.forEach(licor => {
-        const row = document.createElement("tr");
-
-        Object.keys(licor).forEach((key, index) => {
-            const cell = document.createElement("td");
-            cell.textContent = licor[key];
+        const row = document.createElement('tr');
+        Object.values(licor).forEach((value, index) => {
+            const cell = document.createElement('td');
+            cell.textContent = value;
             if (index === 0) {
-                cell.classList.add("align-left"); // Añade la clase a la primera columna
+                cell.classList.add('align-left');
             }
             row.appendChild(cell);
         });
-
         tbody.appendChild(row);
     });
+}
+
+// Inicializar las funciones después de cargar el contenido del documento
+document.addEventListener('DOMContentLoaded', () => {
+    changeIntroText();
+    setupStartButton();
+    setupQuickLinks();
+    loadLicoresTable();
 });

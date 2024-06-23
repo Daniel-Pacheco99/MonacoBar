@@ -1,14 +1,13 @@
-/* Estilos generales para el cuerpo del documento */
+/* Estilos generales */
 body {
-    background-color: black; /* Fondo negro */
-    color: white; /* Texto blanco */
-    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
-    text-align: center; /* Alinear texto al centro */
-    margin: 0; /* Eliminar margen predeterminado */
-    padding: 0; /* Eliminar padding predeterminado */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-/* Contenedor principal que centra todo el contenido verticalmente */
 .container {
     display: flex;
     justify-content: center;
@@ -16,221 +15,169 @@ body {
     min-height: 100vh; /* Mínimo 100% del viewport en altura */
 }
 
-/* Sección de introducción con el logo y texto de bienvenida */
 .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Estilos para el logo */
-.intro img {
-    width: 500px; /* Ancho fijo para el logo */
-    margin-bottom: 10px; /* Espacio inferior */
-    animation: moveLogo 2s ease-in-out infinite alternate; /* Animación del logo */
+.logo {
+    width: 500px;
+    margin-bottom: 10px;
+    animation: moveLogo 2s ease-in-out infinite alternate;
 }
 
-/* Animación de movimiento para el logo */
 @keyframes moveLogo {
     0%, 100% { 
-        transform: translate(-100px, 10px); /* Movimiento inicial y final */
+        transform: translate(-100px, 10px);
     }
     50% {
-        transform: translate(200px, 100px); /* Movimiento en la mitad de la animación */
+        transform: translate(200px, 100px);
     }
 }
 
-/* Estilos para el botón de inicio */
 .btn-start {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ffffff; /* Fondo blanco */
-    color: black; /* Texto negro */
+    background-color: #fff;
+    color: #000;
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Transición de color */
-    margin-top: 20px; /* Espacio superior */
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .btn-start:hover {
-    background-color: #e0e0e0; /* Cambio de color al pasar el ratón */
+    background-color: #e0e0e0;
 }
 
-/* Encabezado del menú */
 .header {
-    background-color: #A56F00; /* Fondo marrón */
-    padding: 20px; /* Relleno interno */
-    text-align: center; /* Alinear texto al centro */
-    display: none; /* Oculto inicialmente */
-    margin-top: 20px; /* Espacio superior */
-    width: 100%; /* Ancho completo */
-    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+    background-color: #A56F00;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .header h2 {
-    font-family: 'Bell MT', serif; /* Fuente para el título */
-    font-size: 36px; /* Tamaño del título */
-    margin: 0; /* Eliminar margen */
-    color: white; /* Texto blanco */
+    font-family: 'Bell MT', serif;
+    font-size: 36px;
+    margin: 0;
+    color: #fff;
 }
 
-/* Sección de menú que contiene las subsecciones */
 .menu-section {
-    display: none; /* Oculto inicialmente */
-    margin-top: 20px; /* Espacio superior */
+    display: none;
+    margin-top: 20px;
 }
 
 .menu-section.active {
-    display: block; /* Mostrar cuando está activo */
+    display: block;
 }
 
-/* Subsecciones del menú */
 .menu-subsection {
-    margin-top: 20px; /* Espacio superior */
+    margin-top: 20px;
 }
 
 .menu-subsection h3 {
-    font-size: 28px; /* Tamaño del título de la subsección */
+    font-size: 28px;
+    color: #A56F00;
 }
 
 .menu-item {
-    font-size: 20px; /* Tamaño del texto de los elementos del menú */
-    margin-bottom: 5px; /* Espacio inferior */
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
-/* Efecto de transición para las subsecciones del menú */
 .menu-subsection {
-    opacity: 0; /* Oculto inicialmente */
-    transition: opacity 0.6s ease-in-out; /* Transición de opacidad */
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
 }
 
 .menu-subsection.active {
-    opacity: 1; /* Mostrar con opacidad completa cuando está activo */
+    opacity: 1;
 }
 
-/* Estilos para los enlaces rápidos */
 .quick-links {
-    display: none; /* Ocultar inicialmente */
-    justify-content: space-around; /* Distribución espaciada */
-    margin-top: 20px; /* Espacio superior */
-    width: 100%; /* Ancho completo */
-    background-color: #333231; /* Fondo gris oscuro */
-    padding: 10px 0; /* Relleno interno */
+    display: none;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #333231;
+    padding: 10px 0;
 }
 
 .quick-link {
-    color: white; /* Texto blanco */
-    font-size: 18px; /* Tamaño del texto */
+    color: #fff;
+    font-size: 18px;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    transition: color 0.3s ease; /* Transición de color */
+    transition: color 0.3s ease;
 }
 
 .quick-link:hover {
-    color: #ffffff; /* Cambio de color al pasar el ratón */
+    color: #e0e0e0;
 }
 
-
-
-
-
-
-/* Estilos generales para la sección de BEBIDAS */
-#bebidas {
-    text-align: center; /* Alinear el texto al centro */
-    margin-bottom: 20px; /* Espacio hacia abajo */
-}
-
-#bebidas h3 {
-    font-family: 'Bell MT', serif; /* Fuente Bell MT */
-    font-size: 30px; /* Tamaño de fuente 30px */
-    color: #A56F00; /* Color de texto #A56F00 */
-}
-
-/* Contenedor para cada fila de subsecciones */
 .sub-menu-row {
-    display: flex; /* Utilizar flexbox */
-    justify-content: center; /* Centrar contenido horizontalmente */
-    margin-top: 10px; /* Espacio hacia arriba */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap; /* Ajuste para envolver los elementos en dispositivos pequeños */
 }
 
-/* Estilos para las columnas de subsecciones */
 .sub-menu-column {
-    width: 50%; /* Ancho del 50% del contenedor principal */
+    width: 50%;
+    padding: 0 10px; /* Espaciado interior para las columnas */
 }
 
 .left-column {
-    text-align: left; /* Alinear texto a la izquierda */
+    text-align: left;
 }
 
 .right-column {
-    text-align: right; /* Alinear texto a la derecha */
+    text-align: right;
 }
 
-/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
-    .sub-menu-row {
-        flex-direction: column; /* Cambiar la dirección a columna */
-    }
-
     .sub-menu-column {
-        width: 100%; /* Cada columna ocupa el 100% del ancho en dispositivos móviles */
-        text-align: center; /* Alinear texto al centro */
+        width: 100%; /* Cambiar al 100% en dispositivos pequeños para ocupar todo el ancho */
+        text-align: center;
     }
 }
 
-
-
-/* Estilos generales para la sección de licores */
-#licores {
-    text-align: center; /* Alinear el texto al centro */
-    margin-bottom: 20px; /* Espacio hacia abajo */
-}
-
-#licores h3 {
-    font-family: 'Bell MT', serif; /* Fuente Bell MT */
-    font-size: 30px; /* Tamaño de fuente 30px */
-    color: #A56F00; /* Color de texto #A56F00 */
-}
-
-/* Estilos para la tabla de licores */
 .licores-table {
-    width: 100%; /* Ancho completo */
-    border-collapse: collapse; /* Colapsar bordes */
-    margin: 20px 0; /* Espacio vertical */
-    font-size: 18px; /* Tamaño de fuente */
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
 }
 
 .licores-table th,
 .licores-table td {
-   
-    padding: 8px; /* Relleno */
+    padding: 8px;
 }
 
 .licores-table th {
-    background-color: #A56F00; /* Fondo de encabezado */
-    color: white; /* Color de texto del encabezado */
-    font-family: 'Bell MT', serif; /* Fuente Bell MT */
+    background-color: #A56F00;
+    color: #fff;
+    font-family: 'Bell MT', serif;
 }
 
 .licores-table tr:hover {
-    background-color: #ddd; /* Fondo al pasar el ratón */
+    background-color: #ddd;
 }
 
-/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
     .licores-table {
-        font-size: 14px; /* Reducir tamaño de fuente en móviles */
+        font-size: 14px;
     }
 }
 
-/* Estilo para la columna de nombres de bebidas */
 .align-left {
     text-align: left;
 }
-
-
