@@ -139,7 +139,7 @@ body {
 
 
 
-/* Estilos para la sección principal de BEBIDAS */
+/* Estilos generales para la sección de BEBIDAS */
 #bebidas {
     text-align: center; /* Alinear el texto al centro */
     margin-bottom: 20px; /* Espacio hacia abajo */
@@ -154,7 +154,7 @@ body {
 /* Contenedor para cada fila de subsecciones */
 .sub-menu-row {
     display: flex; /* Utilizar flexbox */
-    justify-content: left; /* Centrar contenido horizontalmente */
+    justify-content: center; /* Centrar contenido horizontalmente */
     margin-top: 10px; /* Espacio hacia arriba */
 }
 
@@ -171,9 +171,15 @@ body {
     text-align: right; /* Alinear texto a la derecha */
 }
 
+/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
+    .sub-menu-row {
+        flex-direction: column; /* Cambiar la dirección a columna */
+    }
+
     .sub-menu-column {
-        width: 95%; /* En dispositivos móviles, cada columna ocupa el 100% del ancho */
+        width: 100%; /* Cada columna ocupa el 100% del ancho en dispositivos móviles */
+        text-align: center; /* Alinear texto al centro */
     }
 }
 
