@@ -1,65 +1,42 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+.intro img {
+    width: 500px; /* Ancho fijo para el logo */
+    margin-bottom: 10px; /* Margen inferior para separar el logo del texto */
+    animation: moveLogo 2s ease-in-out infinite alternate; /* Animación de movimiento del logo */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+@keyframes moveLogo {
+    0%, 100% { 
+        transform: translate(-100px, 10px); /* Comienza y termina moviéndose hacia la izquierda y abajo */
+    }
+    50% {
+        transform: translate(200px, 100px); /* Moviéndose hacia la derecha y abajo a la mitad de la animación */
+    }
 }
 
-header h1 {
-    margin: 0;
+.intro-text {
+    font-size: 20px; /* Tamaño de fuente para el texto de introducción */
+    line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
+    margin-bottom: 20px; /* Margen inferior para separar el texto del botón */
+    animation: fallDown 2s ease forwards; /* Animación de caída de las letras */
+    opacity: 0; /* Inicialmente invisible */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0;
+@keyframes fallDown {
+    0% { transform: translateY(-100px); opacity: 0; } /* Comienza fuera de la pantalla y transparente */
+    100% { transform: translateY(0); opacity: 1; } /* Termina en la posición final visible */
 }
 
-nav ul li {
-    margin: 0 15px;
+.btn-start {
+    display: inline-block; /* Muestra como bloque en línea */
+    padding: 10px 20px; /* Relleno interior del botón */
+    background-color: #ffffff; /* Color de fondo blanco */
+    color: black; /* Color de texto negro */
+    text-decoration: none; /* Sin decoración de texto */
+    font-size: 24px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #333;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 5px 0;
+.btn-start:hover {
+    background-color: #A56F00; /* Cambio de color de fondo al pasar el ratón */
 }
