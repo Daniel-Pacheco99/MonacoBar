@@ -1,140 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadatos del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monaco Bar</title>
+    <!-- Enlace a la hoja de estilos CSS externa -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Enlace a la fuente de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Contenedor principal -->
     <div class="container">
+        <!-- Sección introductoria -->
         <div class="intro">
             <img src="logoMonacoBar.png" alt="Logo Monaco Bar" class="logo">
             <p class="intro-text">¡Bienvenidos al increíble MÓNACO Bar, donde las experiencias son tan exclusivas como inolvidables! Disfruta cada momento al máximo porque lo que sucede en MÓNACO, <br> ¡PERMANECE EN MÓNACO! 🌟</p>
             <a href="#" id="btn-empezar" class="btn-start">I'm ready</a>
-            <header class="header" id="menu-header">
-                <h2>MENÚ MÓNACO BAR</h2>
-                <nav id="quick-links" class="quick-links">
-                    <a href="#" data-target="bebidas" class="quick-link">BEBIDAS</a>
-                    <a href="#" data-target="licores" class="quick-link">LICORES</a>
-                    <a href="#" data-target="comidas" class="quick-link">COMIDAS</a>
-                    <a href="#" data-target="promociones" class="quick-link">PROMOCIONES</a>
-                </nav>
-            </header>
-            <section id="menu" class="menu-section">
+        </div>
 
-                <div id="bebidas" class="menu-subsection">
-                    <h3>BEBIDAS</h3>
-                    <div class="sub-menu-row">
-                        <div class="sub-menu-column">
-                            <h4>Cocteles</h4>
-                            <p class="menu-item">BLUE HAWAII.......................$17.000</p>
-                            <p class="menu-item">BLUE LAGOON.......................$17.000</p>
-                            <p class="menu-item">CAIPIROSKA.......................$10.000</p>
-                            <p class="menu-item">COSMOPOLITAN.......................$12.000</p>
-                            <p class="menu-item">CUBA LIBRE.......................$10.000</p>
-                            <p class="menu-item">DAIQUIRÍ.......................$16.000</p>
-                            <p class="menu-item">GIN & TONIC.......................$12.000</p>
-                            <p class="menu-item">MARANGIN.......................$15.000</p>
-                            <p class="menu-item">MARGARITA.......................$16.000</p>
-                            <p class="menu-item">MARGARITA MARACUYÁ.......................$16.000</p>
-                            <p class="menu-item">MOJITO.......................$15.000</p>
-                            <p class="menu-item">MOJITO MARACUYÁ.......................$16.000</p>
-                            <p class="menu-item">DRY MARTINI.......................$12.000</p>                            
-                        </div>
-                        <div class="sub-menu-column">
-                            <h4>Sodas Saborizadas</h4>
-                            <p class="menu-item">SODA TRADICIONAL.......................$7.000</p>
-                            <p class="menu-item">COROZO.......................$12.000</p>
-                            <p class="menu-item">GUAYABA AGRIA.......................$12.000</p>
-                            <p class="menu-item">MARACUYÁ.......................$12.000</p>
-                            <p class="menu-item">FRESA.......................$12.000</p>
-                            <p class="menu-item">MANGO BICHE.......................$12.000</p>
-                            <p class="menu-item">MANDARINA.......................$12.000</p>                            
-                        </div>
-                        <div class="sub-menu-column">
-                            <h4>Limonadas</h4>
-                            <p class="menu-item">CEREZADA.......................$6.000</p>
-                            <p class="menu-item">HIERBABUENA.......................$6.000</p>
-                            <p class="menu-item">NATURAL.......................$6.000</p>
-                            <p class="menu-item">BRASILERA DE MORA.......................$8.000</p>                            
-                        </div>
-                        <div class="sub-menu-column">
-                            <h4>Jugos</h4>
-                            <p class="menu-item">PIÑA.......................$6.000</p>
-                            <p class="menu-item">FRESA.......................$6.000-$8.000</p>
-                            <p class="menu-item">MANGO.......................$6.000-$8.000</p>
-                            <p class="menu-item">MORA.......................$6.000-$8.000</p>                            
-                        </div>
-                        <div class="sub-menu-column">
-                            <h4>Otros</h4>
-                            <p class="menu-item">AGUA.......................$2.000</p>
-                            <p class="menu-item">COCA COLA.......................$4.000</p>
-                            <p class="menu-item">SODA.......................$4.000</p>
-                            <p class="menu-item">SPRITE.......................$4.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT FRESA-KIWI.......................$12.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT FRESSA.......................$12.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT JAMAICA.......................$12.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT MORAAZUL.......................$12.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT NARANJA-MANDARINA.......................$12.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT UVA.......................$12.000</p>                            
-                        </div>
-                        <div class="sub-menu-column">
-                            <h4>Cervezas</h4>
-                            <p class="menu-item">AGUILA LIGHT.......................$3.500</p>
-                            <p class="menu-item">COSTEÑITA.......................$3.500</p>
-                            <p class="menu-item">CORONITA.......................$4.500</p>
-                            <p class="menu-item">REDD'S.......................$5.000</p>
-                            <p class="menu-item">AGUILA NEGRA.......................$4.000</p>
-                            <p class="menu-item">BUDWEISER.......................$3.000</p>
-                            <p class="menu-item">POKER.......................$3.000</p>
-                            <p class="menu-item">HEINEKEN.......................$4.500</p>
-                            <p class="menu-item">CLUB COLOMBIA.......................$5.000</p>
-                            <p class="menu-item">STELLA ARTOIS.......................$8.000</p>
-                            <p class="menu-item">SMIRNOFF.......................$12.000</p>
-                            <p class="menu-item">MICHELADA.......................$2.000</p>
-                        </div>
+        <!-- Encabezado del menú -->
+        <header class="header" id="menu-header">
+            <h2>MENÚ MÓNACO BAR</h2>
+            <nav id="quick-links" class="quick-links">
+                <a href="#" data-target="bebidas" class="quick-link">BEBIDAS</a>
+                <a href="#" data-target="licores" class="quick-link">LICORES</a>
+                <a href="#" data-target="comidas" class="quick-link">COMIDAS</a>
+                <a href="#" data-target="promociones" class="quick-link">PROMOCIONES</a>
+            </nav>
+        </header>
+
+        <!-- Sección del menú -->
+        <section id="menu" class="menu-section">
+            <!-- Subsección de bebidas -->
+            <div id="bebidas" class="menu-subsection">
+                <h3>BEBIDAS</h3>
+                <div class="sub-menu-row">
+                    <div class="sub-menu-column">
+                        <h4>Cocteles</h4>
+                        <p class="menu-item">BLUE HAWAII.......................$17.000</p>
+                        <p class="menu-item">BLUE LAGOON.......................$17.000</p>
+                        <p class="menu-item">CAIPIROSKA.......................$10.000</p>
+                        <p class="menu-item">COSMOPOLITAN.......................$12.000</p>
+                        <p class="menu-item">CUBA LIBRE.......................$10.000</p>
+                        <p class="menu-item">DAIQUIRÍ.......................$16.000</p>
+                        <p class="menu-item">GIN & TONIC.......................$12.000</p>
+                        <p class="menu-item">MARANGIN.......................$15.000</p>
+                        <p class="menu-item">MARGARITA.......................$16.000</p>
+                        <p class="menu-item">MARGARITA MARACUYÁ.......................$16.000</p>
+                        <p class="menu-item">MOJITO.......................$15.000</p>
+                        <p class="menu-item">MOJITO MARACUYÁ.......................$16.000</p>
+                        <p class="menu-item">DRY MARTINI.......................$12.000</p>                            
+                    </div>
+
+                    <div class="sub-menu-column">
+                        <h4>Sodas Saborizadas</h4>
+                        <p class="menu-item">SODA TRADICIONAL.......................$7.000</p>
+                        <p class="menu-item">COROZO.......................$12.000</p>
+                        <p class="menu-item">GUAYABA AGRIA.......................$12.000</p>
+                        <p class="menu-item">MARACUYÁ.......................$12.000</p>
+                        <p class="menu-item">FRESA.......................$12.000</p>
+                        <p class="menu-item">MANGO BICHE.......................$12.000</p>
+                        <p class="menu-item">MANDARINA.......................$12.000</p>                            
+                    </div>
+                    <div class="sub-menu-column">
+                        <h4>Limonadas</h4>
+                        <p class="menu-item">CEREZADA.......................$6.000</p>
+                        <p class="menu-item">HIERBABUENA.......................$6.000</p>
+                        <p class="menu-item">NATURAL.......................$6.000</p>
+                        <p class="menu-item">BRASILERA DE MORA.......................$8.000</p>                            
+                    </div>
+                    <div class="sub-menu-column">
+                        <h4>Jugos</h4>
+                        <p class="menu-item">PIÑA.......................$6.000</p>
+                        <p class="menu-item">FRESA.......................$6.000-$8.000</p>
+                        <p class="menu-item">MANGO.......................$6.000-$8.000</p>
+                        <p class="menu-item">MORA.......................$6.000-$8.000</p>                            
+                    </div>
+                    <div class="sub-menu-column">
+                        <h4>Otros</h4>
+                        <p class="menu-item">AGUA.......................$2.000</p>
+                        <p class="menu-item">COCA COLA.......................$4.000</p>
+                        <p class="menu-item">SODA.......................$4.000</p>
+                        <p class="menu-item">SPRITE.......................$4.000</p>
+                        <p class="menu-item">SUERO ELECTROLIT FRESA-KIWI.......................$12.000</p>
+                        <p class="menu-item">SUERO ELECTROLIT FRESSA.......................$12.000</p>
+                        <p class="menu-item">SUERO ELECTROLIT JAMAICA.......................$12.000</p>
+                        <p class="menu-item">SUERO ELECTROLIT MORAAZUL.......................$12.000</p>
+                        <p class="menu-item">SUERO ELECTROLIT NARANJA-MANDARINA.......................$12.000</p>
+                        <p class="menu-item">SUERO ELECTROLIT UVA.......................$12.000</p>                            
+                    </div>
+                    <div class="sub-menu-column">
+                        <h4>Cervezas</h4>
+                        <p class="menu-item">AGUILA LIGHT.......................$3.500</p>
+                        <p class="menu-item">COSTEÑITA.......................$3.500</p>
+                        <p class="menu-item">CORONITA.......................$4.500</p>
+                        <p class="menu-item">REDD'S.......................$5.000</p>
+                        <p class="menu-item">AGUILA NEGRA.......................$4.000</p>
+                        <p class="menu-item">BUDWEISER.......................$3.000</p>
+                        <p class="menu-item">POKER.......................$3.000</p>
+                        <p class="menu-item">HEINEKEN.......................$4.500</p>
+                        <p class="menu-item">CLUB COLOMBIA.......................$5.000</p>
+                        <p class="menu-item">STELLA ARTOIS.......................$8.000</p>
+                        <p class="menu-item">SMIRNOFF.......................$12.000</p>
+                        <p class="menu-item">MICHELADA.......................$2.000</p>
                     </div>
                 </div>
+            </div>
 
-                <div id="licores" class="menu-subsection">
-                    <h3>LICORES</h3>
-                    <table class="licores-table">
-                        <thead>
-                            <tr>
-                                <th class="align-left">Bebida</th>
-                                <th>Shot</th>
-                                <th>Precio 375ml</th>
-                                <th>Precio 750ml</th>
-                                <th>Precio 1000ml</th>
-                            </tr>
-                        </thead>
-                        <tbody id="licores-table-body">
-                            <!-- Contenido generado dinámicamente -->
-                        </tbody>
-                    </table>
-                </div>
-                <div id="comidas" class="menu-subsection">
-                    <h3>COMIDAS</h3>
-                    <p class="menu-item">Entradas</p>
-                </div>
-                <div id="promociones" class="menu-subsection">
-                    <h3>PROMOCIONES</h3>
-                    <p class="menu-item">Happy Hour de 18:00 a 20:00</p>
-                    <p class="menu-item">Descuento del 20% en cumpleaños</p>
-                </div>
-            </section>
-        </div>
+            <!-- Subsección de licores -->
+            <div id="licores" class="menu-subsection">
+                <h3>LICORES</h3>
+                <table class="licores-table">
+                    <thead>
+                        <tr>
+                            <th class="align-left">Bebida</th>
+                            <th>Shot</th>
+                            <th>Precio 375ml</th>
+                            <th>Precio 750ml</th>
+                            <th>Precio 1000ml</th>
+                        </tr>
+                    </thead>
+                    <tbody id="licores-table-body">
+                        <!-- Contenido generado dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Subsección de comidas -->
+            <div id="comidas" class="menu-subsection">
+                <h3>COMIDAS</h3>
+                <p class="menu-item">Entradas</p>
+            </div>
+
+            <!-- Subsección de promociones -->
+            <div id="promociones" class="menu-subsection">
+                <h3>PROMOCIONES</h3>
+                <p class="menu-item">Happy Hour de 18:00 a 20:00</p>
+                <p class="menu-item">Descuento del 20% en cumpleaños</p>
+            </div>
+        </section>
     </div>
+
+    <!-- Sección de contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
         <p>Email: contacto@mibar.com</p>
         <p>Teléfono: 123-456-7890</p>
     </section>
+
+    <!-- Pie de página -->
     <footer>
         <p>&copy; Todos los derechos reservados. Desarrollado por Daniel Pacheco</p>
     </footer>
-    <script src="scripts.js"></script> <!-- Incluir archivo JavaScript externo -->
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="scripts.js"></script>
 </body>
 </html>
