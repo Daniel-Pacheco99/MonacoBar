@@ -1,49 +1,50 @@
-/* Estilos generales del cuerpo */
+/* Estilos generales del cuerpo de la página web*/
 body {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
-    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
-    text-align: center; /* Texto centrado */
-    margin: 0; /* Sin márgenes */
-    padding: 0; /* Sin relleno */
+    font-family: 'BELL MT', sans-serif; /* Tipo de letra */
+    text-align: center; /* Alineaciòn de letra */
+    margin: 0; /* Espacio fuera del borde del elemento */
+    padding: 0; /* Espacio dentro del borde del elemento */
 }
 
-/* Contenedor principal */
+/* Estilos para la clase div class="container" */
 .container {
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    min-height: 100vh; /* Mínimo 100% de la altura del viewport */
+    display: flex; /* Esto convierte al div en un contenedor flex, habilitando el uso de las propiedades flexbox para organizar el contenido dentro de este contenedor */
+    justify-content: center; /* Alinea horizontalmente los elementos hijos del contenedor flex en el centro del contenedor */
+    align-items: center; /* Alinea verticalmente los elementos hijos del contenedor flex en el centro del contenedor */
+    min-height: 100vh; /* Mínimo 100% del viewport en altura */
 }
 
-/* Sección introductoria */
+/* Estilos para la clase div class="intro" */
 .intro {
-    display: flex;
-    flex-direction: column; /* Apila los elementos verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
+    display: flex; /* Esto convierte al div en un contenedor flex, habilitando el uso de las propiedades flexbox para organizar el contenido dentro de este contenedor */
+    flex-direction: column; /* Los elementos flex se colocan en una columna vertical, de arriba hacia abajo */
+    align-items: center; /* Alinea verticalmente los elementos hijos del contenedor flex en el centro del contenedor */
 }
 
 /* Logo del bar */
 .logo {
-    width: 500px;
+    width: 350px; /* Tamaño logo */
     margin-bottom: 10px;
-    animation: moveLogo 2s ease-in-out infinite alternate; /* Animación del logo */
+    animation: moveLogo 2s ease-in-out infinite alternate; /* Animación del logo en segundos */
 }
 
 /* Animación del logo */
 @keyframes moveLogo {
     0%, 100% { 
-        transform: translate(-100px, 10px);
+        transform: translate(-100px, 10px); /* mueve el elemento 100 píxeles a la izquierda y 10 píxeles hacia abajo desde su posición original. */
     }
     50% {
-        transform: translate(200px, 100px);
+        transform: translate(200px, 100px); /* mueve el elemento 200 píxeles a la derecha y 100 píxeles hacia abajo desde su posición original. */
     }
 }
 
-/* Botón de inicio */
+/* Botón de "I'm ready" */
 .btn-start {
     display: inline-block; /* Se comporta como un bloque en línea */
     padding: 10px 20px;
+    font-family: 'BELL MT', sans-serif; /* Tipo de letra */
     background-color: #fff; /* Fondo blanco */
     color: #000; /* Texto negro */
     text-decoration: none; /* Sin subrayado */
@@ -53,156 +54,137 @@ body {
     transition: background-color 0.3s ease; /* Transición suave de color de fondo */
     margin-top: 20px;
 }
-
-/* Hover del botón de inicio */
+/* Botón de inicio pero cuando se pasa por encima o se de click en el botón "I'm ready" */
 .btn-start:hover {
-    background-color: #e0e0e0; /* Cambio de color de fondo al pasar el ratón */
+    background-color: #A56F00; /* Fondo amarillo Mónaco */
+    color:  #000; /* Texto negro*/
 }
 
-/* Encabezado del menú */
 .header {
-    background-color: #A56F00; /* Fondo dorado */
+    background-color: #8100a5;
     padding: 20px;
     text-align: center;
-    display: none; /* Oculto por defecto */
+    display: none;
     margin-top: 20px;
     width: 100%;
-    box-sizing: border-box; /* Incluye el padding en el ancho */
+    box-sizing: border-box;
 }
 
-/* Título del encabezado */
 .header h2 {
-    font-family: 'Bell MT', serif; /* Fuente Bell MT */
-    font-size: 36px; /* Tamaño de fuente grande */
-    margin: 0; /* Sin márgenes */
-    color: #fff; /* Texto blanco */
+    font-family: 'Bell MT', serif;
+    font-size: 36px;
+    margin: 0;
+    color: #fff;
 }
 
-/* Sección del menú */
 .menu-section {
-    display: none; /* Oculto por defecto */
+    display: none;
     margin-top: 20px;
 }
 
-/* Sección del menú activa */
 .menu-section.active {
-    display: block; /* Se muestra cuando está activa */
+    display: block;
 }
 
-/* Subsección del menú */
 .menu-subsection {
     margin-top: 20px;
-    opacity: 0; /* Oculto por defecto */
-    transition: opacity 0.6s ease-in-out; /* Transición suave de opacidad */
 }
 
-/* Subsección del menú activa */
-.menu-subsection.active {
-    opacity: 1; /* Visible cuando está activa */
-}
-
-/* Títulos de las subsecciones */
 .menu-subsection h3 {
-    font-size: 28px; /* Tamaño de fuente grande */
-    color: #A56F00; /* Color dorado */
+    font-size: 28px;
+    color: #A56F00;
 }
 
-/* Ítems del menú */
 .menu-item {
-    font-size: 20px; /* Tamaño de fuente mediano */
+    font-size: 20px;
     margin-bottom: 5px;
 }
 
-/* Enlaces rápidos del menú */
+.menu-subsection {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.menu-subsection.active {
+    opacity: 1;
+}
+
 .quick-links {
-    display: none; /* Ocultos por defecto */
-    justify-content: space-around; /* Distribuye los enlaces uniformemente */
+    display: none;
+    justify-content: space-around;
     margin-top: 20px;
     width: 100%;
-    background-color: #333231; /* Fondo gris oscuro */
+    background-color: #333231;
     padding: 10px 0;
 }
 
-/* Enlace rápido individual */
 .quick-link {
-    color: #fff; /* Texto blanco */
-    font-size: 18px; /* Tamaño de fuente mediano */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: bold; /* Texto en negrita */
-    transition: color 0.3s ease; /* Transición suave de color */
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Hover del enlace rápido */
 .quick-link:hover {
-    color: #e0e0e0; /* Cambio de color al pasar el ratón */
+    color: #e0e0e0;
 }
 
-/* Fila del submenú */
 .sub-menu-row {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en dispositivos pequeños */
+    flex-wrap: wrap; /* Ajuste para envolver los elementos en dispositivos pequeños */
 }
 
-/* Columna del submenú */
 .sub-menu-column {
-    width: 50%; /* Ancho del 50% */
+    width: 50%;
     padding: 0 10px; /* Espaciado interior para las columnas */
 }
 
-/* Columna izquierda */
 .left-column {
     text-align: left;
 }
 
-/* Columna derecha */
 .right-column {
     text-align: right;
 }
 
-/* Ajustes para dispositivos pequeños */
 @media (max-width: 768px) {
     .sub-menu-column {
-        width: 100%; /* Ancho completo en dispositivos pequeños */
+        width: 100%; /* Cambiar al 100% en dispositivos pequeños para ocupar todo el ancho */
         text-align: center;
     }
 }
 
-/* Tabla de licores */
 .licores-table {
-    width: 100%; /* Ancho completo */
-    border-collapse: collapse; /* Elimina el espacio entre las celdas */
+    width: 100%;
+    border-collapse: collapse;
     margin: 20px 0;
-    font-size: 18px; /* Tamaño de fuente mediano */
+    font-size: 18px;
 }
 
-/* Cabecera y celdas de la tabla */
 .licores-table th,
 .licores-table td {
-    padding: 8px; /* Espaciado interior */
+    padding: 8px;
 }
 
-/* Cabecera de la tabla */
 .licores-table th {
-    background-color: #A56F00; /* Fondo dorado */
-    color: #fff; /* Texto blanco */
-    font-family: 'Bell MT', serif; /* Fuente Bell MT */
+    background-color: #A56F00;
+    color: #fff;
+    font-family: 'Bell MT', serif;
 }
 
-/* Hover de las filas de la tabla */
 .licores-table tr:hover {
-    background-color: #ddd; /* Fondo gris claro */
+    background-color: #ddd;
 }
 
-/* Ajustes de la tabla para dispositivos pequeños */
 @media (max-width: 768px) {
     .licores-table {
-        font-size: 14px; /* Tamaño de fuente más pequeño */
+        font-size: 14px;
     }
 }
 
-/* Alineación a la izquierda */
 .align-left {
     text-align: left;
 }
