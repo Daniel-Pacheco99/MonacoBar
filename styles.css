@@ -1,4 +1,4 @@
-/* Estilos generales del cuerpo de la página web*/
+/* Estilos generales del cuerpo de la página web */
 body {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
@@ -23,27 +23,31 @@ body {
     align-items: center; /* Alinea verticalmente los elementos hijos del contenedor flex en el centro del contenedor */
 }
 
+
+
 /* Logo del bar */
 .logo {
-    width: 350px; /* Tamaño logo */
+    padding: 50px; /* Espaciado interior de un elemento (separación entre contenido y borde) */
+    width: 325px; /* Tamaño logo */
     margin-bottom: 10px;
-    animation: moveLogo 2s ease-in-out infinite alternate; /* Animación del logo en segundos */
+    animation: moveLogo 3s ease-in-out infinite alternate; /* Animación del logo en segundos */
 }
-
 /* Animación del logo */
 @keyframes moveLogo {
     0%, 100% { 
-        transform: translate(-100px, 10px); /* mueve el elemento 100 píxeles a la izquierda y 10 píxeles hacia abajo desde su posición original. */
+        transform: translate(-300px, 50px); /* mueve el elemento 100 píxeles a la izquierda y 10 píxeles hacia abajo desde su posición original. */
     }
     50% {
-        transform: translate(200px, 100px); /* mueve el elemento 200 píxeles a la derecha y 100 píxeles hacia abajo desde su posición original. */
+        transform: translate(300px, 0px); /* mueve el elemento 200 píxeles a la derecha y 100 píxeles hacia abajo desde su posición original. */
     }
 }
+
+
 
 /* Botón de "I'm ready" */
 .btn-start {
     display: inline-block; /* Se comporta como un bloque en línea */
-    padding: 10px 20px;
+    padding: 10px 20px; /* Espaciado interior de un elemento (separación entre contenido y borde) */
     font-family: 'BELL MT', sans-serif; /* Tipo de letra */
     background-color: #fff; /* Fondo blanco */
     color: #000; /* Texto negro */
@@ -60,40 +64,68 @@ body {
     color:  #000; /* Texto negro*/
 }
 
+
+
+/* Encabezado del menú */
 .header {
-    background-color: #8100a5;
-    padding: 20px;
-    text-align: center;
-    display: none;
-    margin-top: 20px;
-    width: 100%;
-    box-sizing: border-box;
+    background-color: #A56F00; /* Fondo amarillo Mónaco */
+    padding: 20px; /* Espaciado interior de un elemento (separación entre contenido y borde) */
+    text-align: center; /* Alineación del texto al centro */
+    display: none; /* Inicialmente oculta el elemento */
+    margin-top: 20px; /* Margen superior de 20 píxeles */
+    width: 100%; /* Ancho del elemento al 100% del contenedor padre */
+    box-sizing: border-box; /* Define el modelo de caja incluyente, incluyendo padding y borde en el ancho total */
 }
 
+/* Estilos para el título h2 dentro de .header */
 .header h2 {
-    font-family: 'Bell MT', serif;
-    font-size: 36px;
-    margin: 0;
-    color: #fff;
+    font-family: 'Bell MT', serif; /* Tipo de fuente para el título */
+    font-size: 36px; /* Tamaño de fuente 36 píxeles */
+    margin: 0; /* Elimina el margen predeterminado del título */
+    color: #fff; /* Color del texto blanco */
 }
 
+/* Estilos para el espaciado y mostrar cada sección de la página web */
 .menu-section {
-    display: none;
-    margin-top: 20px;
+    display: none; /* Oculta inicialmente todas las secciones de menú */
+    margin-top: 20px; /* Establece un margen superior de 20px para todas las secciones de menú */
 }
-
 .menu-section.active {
-    display: block;
+    display: block; /* Muestra una sección de menú cuando tiene la clase "active" */
 }
-
 .menu-subsection {
-    margin-top: 20px;
+    margin-top: 50px; /* Establece un margen superior de 20px para todas las subsecciones de menú */
+} 
+/* Enlaces rapidos de la sección categorias*/
+.quick-links {
+    display: none; /* Inicialmente oculta el contenedor de enlaces rápidos */
+    justify-content: space-around; /* Distribuye los elementos de manera uniforme con espacio alrededor */
+    margin-top: 20px; /* Establece un margen superior de 20px */
+    width: 100%; /* Ocupa el ancho completo disponible */
+    background-color: #333231; /* Color de fondo gris oscuro */
+    padding: 10px 10px; /* Relleno de 10px arriba y abajo, 0 a los lados */
+}
+.quick-link {
+    color: #ffffff; /* Color del texto blanco */
+    font-size: 18px; /* Tamaño de fuente de 18px */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s ease; /* Transición suave del color del texto */
+}
+.quick-link:hover {
+    color: #A56F00; /* Color amarillo Mónaco al pasar el cursor sobre los enlaces rápidos */
 }
 
+
+
+/* SUbseccion de Categorias, solo aplica para (Bebidas, Licores, Comidas y Promociones */
 .menu-subsection h3 {
-    font-size: 28px;
-    color: #A56F00;
+    font-family: 'Bell MT', serif; /* Tipo de fuente para el título */
+    font-size: 36px; /* Tamaño de fuente 36 píxeles */
+    margin: 0; /* Elimina el margen predeterminado del título */
+    color:  #A56F00; /* Color amarillo Mónaco */
 }
+
 
 .menu-item {
     font-size: 20px;
@@ -109,26 +141,13 @@ body {
     opacity: 1;
 }
 
-.quick-links {
-    display: none;
-    justify-content: space-around;
-    margin-top: 20px;
-    width: 100%;
-    background-color: #333231;
-    padding: 10px 0;
-}
 
-.quick-link {
-    color: #fff;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
 
-.quick-link:hover {
-    color: #e0e0e0;
-}
+
+
+
+
+
 
 .sub-menu-row {
     display: flex;
