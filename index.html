@@ -1,149 +1,446 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <!-- Metadatos del documento -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mónaco Bar</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace a la hoja de estilos CSS externa -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <!-- Enlace a la fuente de Google Fonts -->
+    <title>BAR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Contenedor principal -->
-    <div class="container">
-        <!-- Sección introductoria -->
-        <div class="intro">
-            <img src="logoMonacoBar.png" alt="Logo Monaco Bar" class="logo">
-            <p class="intro-text">¡Bienvenidos al increíble MÓNACO Bar, donde las experiencias son tan exclusivas como inolvidables! Disfruta cada momento al máximo porque lo que sucede en MÓNACO, <br> ¡PERMANECE EN MÓNACO! 🌟</p>
-            <a href="#" id="btn-empezar" class="btn-start">I'm ready</a>
-        
-            <!-- Encabezado del menú -->
-            <header class="header" id="menu-header">
-                <h2>MENÚ MÓNACO BAR</h2>
-                <nav id="quick-links" class="quick-links">
-                    <a href="#" data-target="bebidas" class="quick-link">BEBIDAS</a>
-                    <a href="#" data-target="licores" class="quick-link">LICORES</a>
-                    <a href="#" data-target="comidas" class="quick-link">COMIDAS</a>
-                    <a href="#" data-target="promociones" class="quick-link">PROMOCIONES</a>
-                </nav>
-            </header>
-
-            <!-- Sección del menú -->
-            <section id="menu" class="menu-section">
-                 <!-- Subsección de bebidas -->
-                <div id="bebidas" class="menu-subsection">
-                    <h3>BEBIDAS</h3>
-                    <div class="sub-menu-row">
-                        <div class="sub-menu-column">
-                            <h4>Cocteles</h4>
-                            <p class="menu-item">BLUE HAWAII.......................$17.000</p>
-                            <p class="menu-item">BLUE LAGOON.......................$17.000</p>
-                            <p class="menu-item">CAIPIROSKA.......................$10.000</p>
-                            <p class="menu-item">COSMOPOLITAN.......................$12.000</p>
-                            <p class="menu-item">CUBA LIBRE.......................$10.000</p>
-                            <p class="menu-item">DAIQUIRÍ.......................$16.000</p>
-                            <p class="menu-item">GIN & TONIC.......................$12.000</p>
-                            <p class="menu-item">MARANGIN.......................$15.000</p>
-                            <p class="menu-item">MARGARITA.......................$16.000</p>
-                            <p class="menu-item">MARGARITA MARACUYÁ.......................$16.000</p>
-                            <p class="menu-item">MOJITO.......................$15.000</p>
-                            <p class="menu-item">MOJITO MARACUYÁ.......................$16.000</p>
-                            <p class="menu-item">DRY MARTINI.......................$12.000</p>                            
-                        </div>
-
-                        <div class="sub-menu-column">
-                            <h4>Sodas Saborizadas</h4>
-                            <p class="menu-item">SODA TRADICIONAL.......................$7.000</p>
-                            <p class="menu-item">COROZO.......................$12.000</p>
-                            <p class="menu-item">GUAYABA AGRIA.......................$12.000</p>
-                            <p class="menu-item">MARACUYÁ.......................$12.000</p>
-                            <p class="menu-item">FRESA.......................$12.000</p>
-                            <p class="menu-item">MANGO BICHE.......................$12.000</p>
-                            <p class="menu-item">MANDARINA.......................$12.000</p>                            
-                        </div>
-                        <div class="sub-menu-column">
-                            <h4>Limonadas</h4>
-                            <p class="menu-item">CEREZADA.......................$6.000</p>
-                            <p class="menu-item">HIERBABUENA.......................$6.000</p>
-                            <p class="menu-item">NATURAL.......................$6.000</p>
-                            <p class="menu-item">BRASILERA DE MORA.......................$8.000</p>                            
-                        </div>
-                        <div class="sub-menu-column">
-                            <h4>Jugos</h4>
-                            <p class="menu-item">PIÑA.......................$6.000</p>
-                            <p class="menu-item">FRESA.......................$6.000-$8.000</p>
-                            <p class="menu-item">MANGO.......................$6.000-$8.000</p>
-                            <p class="menu-item">MORA.......................$6.000-$8.000</p>                            
-                        </div>
-                        <div class="sub-menu-column">
-                            <h4>Otros</h4>
-                            <p class="menu-item">AGUA.......................$2.000</p>
-                            <p class="menu-item">COCA COLA.......................$4.000</p>
-                            <p class="menu-item">SODA.......................$4.000</p>
-                            <p class="menu-item">SPRITE.......................$4.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT FRESA-KIWI.......................$12.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT FRESSA.......................$12.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT JAMAICA.......................$12.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT MORAAZUL.......................$12.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT NARANJA-MANDARINA.......................$12.000</p>
-                            <p class="menu-item">SUERO ELECTROLIT UVA.......................$12.000</p>                            
-                        </div>
-                        <div class="sub-menu-column">
-                            <h4>Cervezas</h4>
-                            <p class="menu-item">AGUILA LIGHT.......................$3.500</p>
-                            <p class="menu-item">COSTEÑITA.......................$3.500</p>
-                            <p class="menu-item">CORONITA.......................$4.500</p>
-                            <p class="menu-item">REDD'S.......................$5.000</p>
-                            <p class="menu-item">AGUILA NEGRA.......................$4.000</p>
-                            <p class="menu-item">BUDWEISER.......................$3.000</p>
-                            <p class="menu-item">POKER.......................$3.000</p>
-                            <p class="menu-item">HEINEKEN.......................$4.500</p>
-                            <p class="menu-item">CLUB COLOMBIA.......................$5.000</p>
-                            <p class="menu-item">STELLA ARTOIS.......................$8.000</p>
-                            <p class="menu-item">SMIRNOFF.......................$12.000</p>
-                            <p class="menu-item">MICHELADA.......................$2.000</p>
-                        </div>
+    <!-- HEADER -->
+    <header>
+        <!-- Contiene la parte superior de la pagina web, es decir, el encabezado por así decirlo -->
+        <div class="menu container">
+            <img class="logo-1" src="imagenes/logo.svg" alt="">
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="imagenes/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Productos</a></li>
+                    </ul>
+                </div>
+                <img class="logo-2" src="imagenes/logo.svg" alt="">
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="#">Horario</a></li>
+                    </ul>
+                    <div class="socials">
+                        <a href="#">
+                            <div class="social">
+                                <img src="imagenes/s1.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social">
+                                <img src="imagenes/s2.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social">
+                                <img src="imagenes/s3.svg" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
-
-                <!-- Subsección de licores -->
-                <div id="licores" class="menu-subsection">
-                    <h3>LICORES</h3>
-                    <table class="licores-table">
-                        <thead>
-                            <tr>
-                                <th class="align-left">Bebida</th>
-                                <th>Shot</th>
-                                <th>Precio 375ml</th>
-                                <th>Precio 750ml</th>
-                                <th>Precio 1000ml</th>
-                            </tr>
-                        </thead>
-                        <tbody id="licores-table-body">
-                            <!-- Contenido generado dinámicamente -->
-                        </tbody>
-                    </table>
-                </div>
-                <div id="comidas" class="menu-subsection">
-                    <h3>COMIDAS</h3>
-                    <p class="menu-item">Entradas</p>
-                </div>
-                <div id="promociones" class="menu-subsection">
-                    <h3>PROMOCIONES</h3>
-                    <p class="menu-item">Happy Hour de 18:00 a 20:00</p>
-                    <p class="menu-item">Descuento del 20% en cumpleaños</p>
-                </div>
-            </section>
+            </nav>
         </div>
-    </div>
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Email: monacogastrobarmtr@gmail.com</p>
-        <p>Teléfono: (+57) 300-534-7871</p>
+        <!-- parte xxxxx-->
+        <div class="header-content container">
+
+            <div class="swiper mySwiper-1">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Hamburguesa</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At inventore laudantium
+                                    quis neque velit nisi aut aliquid dolorem non architecto quae ex quasi minima
+                                    accusamus quas qui dolore, ipsam officiis.
+                                </p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1">Comprar</a>
+                                    <a href="#" class="btn-1">Menú</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="imagenes/slider1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Torta</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At inventore laudantium
+                                    quis neque velit nisi aut aliquid dolorem non architecto quae ex quasi minima
+                                    accusamus quas qui dolore, ipsam officiis.
+                                </p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1">Comprar</a>
+                                    <a href="#" class="btn-1">Menú</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="imagenes/slider2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Perro</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At inventore laudantium
+                                    quis neque velit nisi aut aliquid dolorem non architecto quae ex quasi minima
+                                    accusamus quas qui dolore, ipsam officiis.
+                                </p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1">Comprar</a>
+                                    <a href="#" class="btn-1">Menú</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="imagenes/slider3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="products">
+        <div class="tabs container">
+
+            <input type="radio" name="tabs" id="tab1" checked="checked" class="tabInput" value="1">
+            <label for="tab1">Hamburguesas</label>
+            <div class="tab">
+                <div class="swiper mySwiper-2" id="swiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>Nuevo</h4>
+                                    <img src="imagenes/food1.png" alt="">
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Producto1</h4>
+                                    <p>calidad premium</p>
+                                    <span class="price">$80.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>Nuevo</h4>
+                                    <img src="imagenes/food2.png" alt="">
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Producto2</h4>
+                                    <p>calidad premium</p>
+                                    <span class="price">$80.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>Nuevo</h4>
+                                    <img src="imagenes/food3.png" alt="">
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Producto3</h4>
+                                    <p>calidad premium</p>
+                                    <span class="price">$80.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>Nuevo</h4>
+                                    <img src="imagenes/food2.png" alt="">
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Producto4</h4>
+                                    <p>calidad premium</p>
+                                    <span class="price">$80.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+
+            <input type="radio" name="tabs" id="tab2" checked="checked" class="tabInput" value="2">
+            <label for="tab2">Burritos</label>
+            <div class="tab">
+                <div class="swiper mySwiper-2" id="swiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>Nuevo</h4>
+                                    <img src="imagenes/food4.png" alt="">
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Producto1</h4>
+                                    <p>calidad premium</p>
+                                    <span class="price">$80.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>Nuevo</h4>
+                                    <img src="imagenes/food5.png" alt="">
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Producto2</h4>
+                                    <p>calidad premium</p>
+                                    <span class="price">$80.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>Nuevo</h4>
+                                    <img src="imagenes/food6.png" alt="">
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Producto3</h4>
+                                    <p>calidad premium</p>
+                                    <span class="price">$80.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <input type="radio" name="tabs" id="tab3" checked="checked" class="tabInput" value="3">
+            <label for="tab3">Variedad</label>
+            <div class="tab">
+                <div class="swiper mySwiper-2" id="swiper3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>Nuevo</h4>
+                                    <img src="imagenes/food7.png" alt="">
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Producto1</h4>
+                                    <p>calidad premium</p>
+                                    <span class="price">$80.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>Nuevo</h4>
+                                    <img src="imagenes/food8.png" alt="">
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Producto2</h4>
+                                    <p>calidad premium</p>
+                                    <span class="price">$80.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="product-img">
+                                    <h4>Nuevo</h4>
+                                    <img src="imagenes/food9.png" alt="">
+                                </div>
+                                <div class="product-txt">
+                                    <h4>Producto3</h4>
+                                    <p>calidad premium</p>
+                                    <span class="price">$80.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+    <!-- SECCION INFO -->
+    <section class="info container">
+
+        <div class="info-img">
+            <img src="imagenes/info.png" alt="">
+        </div>
+
+        <div class="info-txt">
+            <h2>Information</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Magni nemo accusantium dolor placeat. 
+                Corrupti nostrum nemo fugit minus commodi at incidunt, 
+                accusamus odit veniam, 
+                quae ratione illum ipsum ab harum?
+            </p>
+            <a href="#" class="btn-2">Más información</a>
+        </div>
+
     </section>
-    <footer>
-        <p>&copy; Todos los derechos reservados. Desarrollado por Daniel Pacheco</p>
+    <!-- SECCION HORARIO -->   
+    <section class="horario">
+        <div class="horario-info container">
+            <h2>Horario</h2>
+            <div class="horario-txt">
+                <div class="txt">
+                    <h4>Dirección</h4>
+                    <p> 
+                        monterverde 34-67h
+                    </p>
+                    <p>
+                        extra aqui direcciovn 2
+                    </p>
+                </div>
+                <div class="txt">
+                    <h4>Horario</h4>
+                    <p> 
+                        Lunes a viernes: 5pm a 12am
+                    </p>
+                    <p>
+                        Sábado y Domingo: 7pm a 2am
+                    </p>
+                </div>
+                <div class="txt">
+                    <h4>Telefono</h4>
+                    <p> 
+                        123456
+                    </p>
+                    <p>
+                        12345678
+                    </p>
+                </div>
+                <div class="txt">
+                    <h4>Redes Sociales</h4>
+                    <div class="socials">
+                        <a href="#">
+                            <div class="social">
+                                <img src="imagenes/s1.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social">
+                                <img src="imagenes/s2.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social">
+                                <img src="imagenes/s3.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION MAPA -->
+    <section>
+
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.46061965678302!2d-75.8644460314435!3d8.75122212377509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5a2fe5a57031ad%3A0x92e1cbad2ed7c0a0!2zTW9udGVyw61hLCBDw7NyZG9iYSwgQ29sb21iaWE!5e0!3m2!1ses!2ses!4v1720462862267!5m2!1ses!2ses" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer container">
+
+        <img class="logo-2" src="imagenes/logo.svg" alt="">
+        <div class="links">
+            <h4>LOREM</h4>
+            <ul>
+                <li><a href="#">lorem</a></li>
+                <li><a href="#">lorem</a></li>
+                <li><a href="#">lorem</a></li>
+                <li><a href="#">lorem</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>LOREM</h4>
+            <ul>
+                <li><a href="#">lorem</a></li>
+                <li><a href="#">lorem</a></li>
+                <li><a href="#">lorem</a></li>
+                <li><a href="#">lorem</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>LOREM</h4>
+            <ul>
+                <li><a href="#">lorem</a></li>
+                <li><a href="#">lorem</a></li>
+                <li><a href="#">lorem</a></li>
+                <li><a href="#">lorem</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>lorem</h4>
+            <div class="socials">
+                <a href="#">
+                    <div class="social">
+                        <img src="imagenes/s1.svg" alt="">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="social">
+                        <img src="imagenes/s2.svg" alt="">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="social">
+                        <img src="imagenes/s3.svg" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
     </footer>
-    <script src="scripts.js"></script> <!-- Incluir archivo JavaScript externo -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="scripts.js"></script>
 </body>
+
 </html>
