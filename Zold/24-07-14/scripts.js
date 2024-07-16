@@ -154,43 +154,45 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 // Función para mostrar las subcategorías de la categoría seleccionada
-document.addEventListener('DOMContentLoaded', function () {
-    mostrarSubcategorias('none');
-});
-
-function mostrarSubcategorias(id) {
+function mostrarSubcategorias(categoria) {
+    // Oculta todas las subcategorías
     let subcategorias = document.querySelectorAll('.subcategoria');
     subcategorias.forEach(subcategoria => {
-        subcategoria.style.display = 'none';
+        subcategoria.classList.remove('active');
     });
 
-    let productoLists = document.querySelectorAll('.producto-list');
-    productoLists.forEach(productoList => {
-        productoList.style.display = 'none';
-    });
-
-    let subcategoria = document.getElementById('sub-' + id);
-    if (subcategoria) {
-        subcategoria.style.display = 'block';
-    }
-}
-
-function scrollToElement(id) {
-    let element = document.getElementById(id);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        let productoLists = document.querySelectorAll('.producto-list');
-        productoLists.forEach(list => {
-            list.style.display = 'none';
-        });
-        element.style.display = 'block';
-    }
+    // Muestra la subcategoría correspondiente a la categoría seleccionada
+    let subcategoria = document.getElementById(`sub-${categoria}`);
+    subcategoria.classList.add('active');
 }
 
 
 
 
 
+// Función para agregar puntos suspensivos si es necesario
+function ajustarPuntosSuspensivos() {
+    let productos = document.querySelectorAll('.producto');
 
+    productos.forEach(producto => {
+        let nombre = producto.querySelector('.nombre');
+        let precio = producto.querySelector('.precio');
+        let contenedor = producto.offsetWidth; // Ancho del contenedor de producto
+        let nombreAncho = nombre.offsetWidth; // Ancho del nombre del producto
+        let precioAncho = precio.offsetWidth; // Ancho del precio
 
+        let puntos = '...';
 
+        // Calcula el espacio disponible para los puntos suspensivos
+        let espacioDisponible = contenedor - (nombreAncho + precioAncho);
+
+        // Si el espacio disponible es menor que el ancho de los puntos suspensivos, añádelos
+        if (espacioDisponible < puntos.offsetWidth) {
+            nombre.textContent = nombre.textContent.substring(0, nombre.textContent.length - 1) + puntos;
+        }
+    });
+}
+
+// Ejecuta la función al cargar la página y cuando cambie el tamaño de la ventana
+document.addEventListener('DOMContentLoaded', ajustarPuntosSuspensivos);
+window.addEventListener('resize', ajustarPuntosSuspensivos);

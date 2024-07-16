@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÓNACO GASTRO BAR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header hidden">
+        <!-- Redes Sociales -->
+        <div class="redes-sociales">
+            <a href="https://wa.me/message/VMUENZTTRNW4K1" target="_blank">
+                <div class="social">
+                    <img src="Imagenes/WhatsApp.png" alt="WhatsApp">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/monacogastrobar?igsh=YjlxZjB2d21iZDA1&utm_source=qr" target="_blank">
+                <div class="social">
+                    <img src="Imagenes/Instagram.png" alt="Instagram">
+                </div>
+            </a>
+        </div>
+
+        <!-- Menú desplegable de atajos -->
+        <div class="menu-desplegable">
+            <img src="Imagenes/menu.png" alt="Menú" id="menu-btn">
+            <ul class="dropdown-content" id="dropdown-menu">
+                <li><a href="#ThisIsMonaco">Esto es MONÁCO!</a></li>
+                <li><a href="#Carta">Carta</a></li>
+                <li><a href="#PróximosEventos">Eventos</a></li>
+                <li><a href="#Eventos">Eventos</a></li>
+                <li><a href="#horario-direccion">Horario</a></li>
+                <li><a href="#mapa-txt">Como llegar</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="inicio">
+        <div class="inicio-2">
+            <img src="Imagenes/logoMonacoBar.png" alt="Logo Monaco Bar" class="logo">
+            <p class="intro-text">¡Bienvenidos al increíble MÓNACO Bar, donde las experiencias son tan exclusivas como
+                inolvidables! Disfruta cada momento al máximo porque lo que sucede en MÓNACO, <br> ¡PERMANECE EN MÓNACO!
+                🌟</p>
+            <a href="#" id="btn-empezar" class="btn-start">I'm ready</a>
+        </div>
+    </main>
+
+
+    <!-- SECCION ThisIsMonaco -->
+    <section id="ThisIsMonaco" class="ThisIsMonaco hidden">
+        <h2>¡Esto es MÓNACO!</h2>
+        <div class="slider">
+            <div class="slide">
+                <img src="Imagenes/CubetazosPromo.jpg" alt="Cubetazos Promo">
+            </div>
+            <div class="slide">
+                <img src="Imagenes/Cócteles2x1.jpg" alt="Cócteles 2x1">
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+
+
+    <!-- SECCION Carta -->
+    <section id="Carta" class="Carta hidden">
+        <h2>Carta</h2>
+        <div class="categorias">
+            <div class="categoria" onclick="mostrarSubcategorias('bebidas')">Bebidas</div>
+            <div class="categoria" onclick="mostrarSubcategorias('licores')">Licores</div>
+            <div class="categoria" onclick="mostrarSubcategorias('comidas')">Comidas</div>
+            <div class="categoria" onclick="mostrarSubcategorias('promociones')">Promociones</div>
+        </div>
+
+        
+        <div class="subcategorias">
+            <div id="sub-bebidas" class="subcategoria">
+                <h3>CÓCTELES</h3>
+                <div class="subcategoria-content">
+                    <div class="producto">
+                        <span class="nombre">DAIQUIRÍ</span><span class="precio"> $16.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">DAIQUIRÍ</span><span class="precio"> $16.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">MARGARITA</span><span class="precio"> $16.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">MARGARITA MARACUYA</span><span class="precio"> $25.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">MOJITO</span><span class="precio"> $15.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">MOJITO MARACUYÁ</span><span class="precio"> $16.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">GIN & TONIC</span><span class="precio"> $12.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">MARANGIN</span><span class="precio"> $15.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">DRY MARTINI</span><span class="precio"> $12.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">BLUE LAGOON</span><span class="precio"> $17.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">COSMOPOLITAN</span><span class="precio"> $12.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">CAIPIROSKA</span><span class="precio"> $10.000</span>
+                    </div>
+                    <div class="producto">
+                        <span class="nombre">BLUE HAWAII</span><span class="precio"> $17.000</span>
+                    </div>
+                </div>
+
+                <h3>SODAS SABORIZADAS</h3>
+                <div class="subcategoria-content">
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                </div>
+
+                <h3>LIMONADAS</h3>
+                <div class="subcategoria-content">
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                </div>
+
+                <h3>JUGOS</h3>
+                <div class="subcategoria-content">
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                </div>
+
+                <h3>OTROS</h3>
+                <div class="subcategoria-content">
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                </div>
+
+                <h3>CERVEZAS</h3>
+                <div class="subcategoria-content">
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                </div>
+
+                <h3>CUBETAZOS</h3>
+                <div class="subcategoria-content">
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                    <div class="producto">
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="sub-licores" class="subcategoria">
+                <h3>Licores</h3>
+                <div class="subcategoria-content">
+                    <div class="producto">
+                        <span>Whisky</span>
+                        <span>Johnnie Walker Black Label - $80.000</span>
+                    </div>
+                    <div class="producto">
+                        <span>Vinos</span>
+                        <span>Casillero del Diablo - $50.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sub-comidas" class="subcategoria">
+                <h3>Comidas</h3>
+                <div class="subcategoria-content">
+                    <div class="producto">
+                        <span>Entradas</span>
+                        <span>Empanadas - $2.000</span>
+                    </div>
+                    <div class="producto">
+                        <span>Platos Fuertes</span>
+                        <span>Filete de Res - $25.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sub-promociones" class="subcategoria">
+                <h3>Promociones</h3>
+                <div class="subcategoria-content">
+                    <div class="producto">
+                        <span>Happy Hour</span>
+                        <span>2x1 en Margaritas</span>
+                    </div>
+                    <div class="producto">
+                        <span>Descuentos</span>
+                        <span>10% de descuento en cervezas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCION Próximos Eventos -->
+    <section id="PróximosEventos" class="PróximosEventos hidden">
+        <h2>Próximos Eventos</h2>
+        <div class="slider-2">
+            <div class="slide-2">
+                <video src="Videos/FinalEurocopa.mp4" autoplay muted loop alt="Cubetazos Promo"></video>
+            </div>
+            <div class="slide-2">
+                <video src="Videos/FinalCopaAmerica.MP4" autoplay muted loop alt="Cubetazos Promo"></video>
+            </div>
+        </div>
+        <a class="prev-2" onclick="plusSlides2(-1)">&#10094;</a>
+        <a class="next-2" onclick="plusSlides2(1)">&#10095;</a>
+    </section>
+
+
+    <!-- SECCION Eventos -->
+    <section id="Eventos" class="Eventos hidden">
+        <h2>Eventos</h2>
+        <div class="slider-3">
+            <div class="slide-3">
+                <video src="Videos/AmbienteColombia.MP4" autoplay muted loop alt="Cócteles 2x1"></video>
+            </div>
+            <div class="slide-3">
+                <video src="Videos/Producto.mp4" autoplay muted loop alt="Cócteles 2x1"></video>
+            </div>
+        </div>
+        <a class="prev-3" onclick="plusSlides3(-1)">&#10094;</a>
+        <a class="next-3" onclick="plusSlides3(1)">&#10095;</a>
+    </section>
+
+
+    <!-- SECCION HORARIO -->
+    <section id="horario-direccion" class="horario-direccion hidden">
+        <h2>Horario y Dirección</h2>
+        <div class="txt">
+            <h3>Horario</h3>
+            <p>
+                Lunes a Jueves: 5pm a 12am
+            </p>
+            <p>
+                Viernes y Sábado: 5pm a 3am
+            </p>
+            <p class="last">
+                Domingos: 3pm a 12am
+            </p>
+        </div>
+        <div class="txt">
+            <h3>Dirección</h3>
+            <p>
+                Cr 16a #44-18 B/ Monteverde <br>
+                Montería, Córdoba, Colombia
+            </p>
+        </div>
+    </section>
+
+
+    <!-- SECCION MAPA -->
+    <section id="mapa-txt" class="mapa-txt hidden">
+        <h2>Como llegar</h2>
+        <iframe class="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.3252221968773!2d-75.8665338!3d8.755439500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5a2f00097cb855%3A0x65edb5162ffab341!2zTcOzbmFjbw!5e0!3m2!1ses-419!2ses!4v1720809916603!5m2!1ses-419!2ses"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer container hidden">
+        <!-- Redes Sociales -->
+        <div class="redes-sociales">
+            <a href="https://wa.me/message/VMUENZTTRNW4K1" target="_blank">
+                <div class="social">
+                    <img src="Imagenes/WhatsApp.png" alt="WhatsApp">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/monacogastrobar?igsh=YjlxZjB2d21iZDA1&utm_source=qr" target="_blank">
+                <div class="social">
+                    <img src="Imagenes/Instagram.png" alt="Instagram">
+                </div>
+            </a>
+        </div>
+        <!-- Mensaje del footer -->
+        <p>&copy; Todos los derechos reservados. <br> Desarrollado por Daniel Pacheco</p>
+    </footer>
+
+
+    <!-- EXTRA -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
