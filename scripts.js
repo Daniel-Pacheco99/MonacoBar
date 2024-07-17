@@ -114,14 +114,14 @@ function autoShowSlides2() {
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    showSlides2(slideIndex2);
+    showSlides3(slideIndex2);
     autoShowSlides2();
 });
 
 
 // Slide-3 -> Eventos
 let slideIndex3 = 0;
-showSlides2(slideIndex3);
+showSlides3(slideIndex3);
 
 function plusSlides3(n) {
     showSlides3(slideIndex3 += n);
