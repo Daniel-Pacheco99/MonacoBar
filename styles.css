@@ -105,15 +105,7 @@ body {
   margin-bottom: 10px;
   animation: moveLogo 4s ease-in-out infinite alternate; /* Animación del logo en segundos */
 }
-/* Animación del logo */
-@keyframes moveLogo {
-  0%, 100% { 
-      transform: translate(-200px, 50px); /* mueve el elemento 100 píxeles a la izquierda y 10 píxeles hacia abajo desde su posición original. */
-  }
-  50% {
-      transform: translate(200px, 0px); /* mueve el elemento 200 píxeles a la derecha y 100 píxeles hacia abajo desde su posición original. */
-  }
-}
+
 .inicio-2 p{
   color: #e0e0e0; /* Color gris claro */
   text-align: center;
